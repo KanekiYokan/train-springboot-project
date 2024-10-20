@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class stations {
+public class Station {
     private String type;
     private String id;
     private int uicId;
