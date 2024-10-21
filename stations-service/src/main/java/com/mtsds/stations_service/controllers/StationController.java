@@ -14,9 +14,15 @@ public class StationController {
 
     @GetMapping("/")
     public ResponseEntity<String> landing() throws IOException, InterruptedException {
-        TestCPAPI testCPAPI = new TestCPAPI();
+//        TestCPAPI testCPAPI = new TestCPAPI();
 //        return ResponseEntity.status(HttpStatus.OK).body(teste123.Test());
-        return ResponseEntity.status(HttpStatus.OK).body(testCPAPI.Test());
+        return ResponseEntity.status(HttpStatus.OK).body("Station Controller is online.");
+    }
+
+    @GetMapping("/stations/")
+    public ResponseEntity<String> getStations() throws IOException, InterruptedException {
+        TestCPAPI testCPAPI = new TestCPAPI();
+        return ResponseEntity.status(HttpStatus.OK).body(testCPAPI.GetStations());
     }
 }
 
